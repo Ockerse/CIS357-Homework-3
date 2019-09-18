@@ -11,6 +11,8 @@ import UIKit
 class ViewController: UIViewController {
     @IBOutlet weak var fromField: DecimalMinusTextField!
     @IBOutlet weak var toField: DecimalMinusTextField!
+    @IBOutlet weak var label1: UILabel!
+    @IBOutlet weak var label2: UILabel!
     
     
     
@@ -29,7 +31,9 @@ class ViewController: UIViewController {
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
-        
+        if self.fromField.text != "" && self.toField.text == ""{
+            
+        }
     }
 }
 

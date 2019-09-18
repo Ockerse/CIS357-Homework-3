@@ -45,3 +45,15 @@ let lengthConversionTable : Dictionary<LengthConversionKey, Double> = [
     LengthConversionKey(toUnits: .Miles, fromUnits: .Yards) : 0.000568182,
     LengthConversionKey(toUnits: .Miles, fromUnits: .Miles) : 1.0
 ]
+
+let volumeConversionTable : Dictionary<VolumeConversionKey, Double> = [
+    VolumeConversionKey(toUnits: .Liters, fromUnits: .Liters) : 1.0,
+    VolumeConversionKey(toUnits: .Liters, fromUnits: .Gallons) : 3.78541,
+    VolumeConversionKey(toUnits: .Liters, fromUnits: .Quarts) : 0.946353,
+    VolumeConversionKey(toUnits: .Gallons, fromUnits: .Liters) : 0.264172,
+    VolumeConversionKey(toUnits: .Gallons, fromUnits: .Gallons) : 1.0,
+    VolumeConversionKey(toUnits: .Gallons, fromUnits: .Quarts) : 0.25,
+    VolumeConversionKey(toUnits: .Quarts, fromUnits: .Liters) : 1.05669,
+    VolumeConversionKey(toUnits: .Quarts, fromUnits: .Gallons) : 4.0,
+    VolumeConversionKey(toUnits: .Quarts, fromUnits: .Quarts) : 1.0
+]

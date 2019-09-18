@@ -103,6 +103,8 @@
                     <navigationItem key="navigationItem" id="bPg-Sy-ycj"/>
                     <connections>
                         <outlet property="fromField" destination="3j6-ap-t0b" id="CmL-NM-vWu"/>
+                        <outlet property="label1" destination="ZME-OT-mWY" id="v6f-pr-0Ax"/>
+                        <outlet property="label2" destination="PUj-ZS-043" id="IXa-ww-sh7"/>
                         <outlet property="toField" destination="vYN-cT-Qzt" id="aI5-oq-MG6"/>
                     </connections>
                 </viewController>
