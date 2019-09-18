@@ -34,6 +34,10 @@ class ViewController: UIViewController {
         if self.fromField.text != "" && self.toField.text == ""{
             
         }
+        
+        else if self.fromField.text == "" && self.toField.text != ""{
+            
+        }
     }
 }
 
