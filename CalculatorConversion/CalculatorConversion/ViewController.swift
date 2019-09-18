@@ -19,11 +19,18 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @objc func dismissKeyboard() {
+        self.view.endEditing(true)
+    }
+    
     @IBAction func clearButtonPressed(_ sender: UIButton) {
         toField.text = ""
         fromField.text = ""
     }
     
+    @IBAction func calculateButtonPressed(_ sender: UIButton) {
+        
+    }
 }
 
 
