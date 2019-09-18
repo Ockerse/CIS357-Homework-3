@@ -9,12 +9,19 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    @IBOutlet weak var fromField: DecimalMinusTextField!
+    @IBOutlet weak var toField: DecimalMinusTextField!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
 
 
+    @IBAction func clearButtonPressed(_ sender: UIButton) {
+        toField!.text = ""
+        fromField.text = ""
+    }
 }
 
