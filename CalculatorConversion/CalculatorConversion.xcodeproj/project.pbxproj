@@ -14,6 +14,7 @@
 		99554063233176D900D07CF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 99554061233176D900D07CF4 /* LaunchScreen.storyboard */; };
 		9955406E233176D900D07CF4 /* CalculatorConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955406D233176D900D07CF4 /* CalculatorConversionTests.swift */; };
 		99554079233176D900D07CF4 /* CalculatorConversionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99554078233176D900D07CF4 /* CalculatorConversionUITests.swift */; };
+		99B951BA2331BC7A0048B2BA /* DecimalMinusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B951B92331BC7A0048B2BA /* DecimalMinusTextField.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		99554074233176D900D07CF4 /* CalculatorConversionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculatorConversionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		99554078233176D900D07CF4 /* CalculatorConversionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConversionUITests.swift; sourceTree = "<group>"; };
 		9955407A233176D900D07CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		99B951B92331BC7A0048B2BA /* DecimalMinusTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecimalMinusTextField.swift; path = ../../DecimalMinusTextField/DecimalMinusTextField.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				99554058233176D800D07CF4 /* AppDelegate.swift */,
 				9955405A233176D800D07CF4 /* ViewController.swift */,
+				99B951B92331BC7A0048B2BA /* DecimalMinusTextField.swift */,
 				9955405C233176D800D07CF4 /* Main.storyboard */,
 				9955405F233176D900D07CF4 /* Assets.xcassets */,
 				99554061233176D900D07CF4 /* LaunchScreen.storyboard */,
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				99B951BA2331BC7A0048B2BA /* DecimalMinusTextField.swift in Sources */,
 				9955405B233176D800D07CF4 /* ViewController.swift in Sources */,
 				99554059233176D800D07CF4 /* AppDelegate.swift in Sources */,
 			);
