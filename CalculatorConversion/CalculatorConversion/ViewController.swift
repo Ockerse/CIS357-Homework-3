@@ -100,26 +100,24 @@ class ViewController: UIViewController {
             if toLength == .Meters {
                 getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
                 cons = lengthConversionTable[getLength]!
-                ans = cons * Double(toField.text!)!
+                ans = cons * Double(fromField.text!)!
             }
                 
             else if toLength == .Miles {
                 getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
                 cons = lengthConversionTable[getLength]!
-                ans = cons * Double(toField.text!)!
+                ans = cons * Double(fromField.text!)!
             }
                 
             else if toLength == .Yards {
                 getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
                 cons = lengthConversionTable[getLength]!
-                ans = cons * Double(toField.text!)!
+                ans = cons * Double(fromField.text!)!
             }
             
             toField.text = String(ans)
             
         }
-            
-        
             
         else if unit == CalculatorMode.Length && !((toField.text?.isEmpty)!){
             if toLength == .Meters {
