@@ -95,49 +95,48 @@ class ViewController: UIViewController {
             print("Error, cannot have both boxes filled")
             print("clear out one of the boxes, thank you!")
         }
-            //check the mode and which field to calculate
+        
         else if unit == CalculatorMode.Length && !((fromField.text?.isEmpty)!) {
-            switch fromLength {
-            case .Meters:
-                getLength = LengthConversionKey.init(toUnits: toLength, fromUnits: fromLength)
+            if toLength == .Meters {
+                getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
                 cons = lengthConversionTable[getLength]!
+                ans = cons * Double(toField.text!)!
+            }
                 
-                ans = cons * Double(fromField.text!)!
-                
-            case .Miles:
-                getLength = LengthConversionKey.init(toUnits: toLength, fromUnits: fromLength)
+            else if toLength == .Miles {
+                getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
                 cons = lengthConversionTable[getLength]!
+                ans = cons * Double(toField.text!)!
+            }
                 
-                ans = cons * Double(fromField.text!)!
-            case .Yards:
-                getLength = LengthConversionKey.init(toUnits: toLength, fromUnits: fromLength)
+            else if toLength == .Yards {
+                getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
                 cons = lengthConversionTable[getLength]!
-
-                ans = cons * Double(fromField.text!)!
+                ans = cons * Double(toField.text!)!
             }
             
             toField.text = String(ans)
             
         }
             
+        
+            
         else if unit == CalculatorMode.Length && !((toField.text?.isEmpty)!){
-            switch toLength {
-            case .Meters:
+            if toLength == .Meters {
                 getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
                 cons = lengthConversionTable[getLength]!
-                
                 ans = cons * Double(toField.text!)!
+            }
                 
-            case .Miles:
+            else if toLength == .Miles {
                 getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
                 cons = lengthConversionTable[getLength]!
-                
                 ans = cons * Double(toField.text!)!
-            case .Yards:
+            }
+                
+            else if toLength == .Yards {
                 getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
                 cons = lengthConversionTable[getLength]!
-                //print("The constant is \(cons)")
-                //print("from says \(fromLabel.text)")
                 ans = cons * Double(toField.text!)!
             }
             
