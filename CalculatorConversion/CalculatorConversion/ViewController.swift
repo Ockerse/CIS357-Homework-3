@@ -17,12 +17,18 @@ class ViewController: UIViewController {
     
     var prefix = "Enter length in "
     var unit = CalculatorMode.Length
-    var tolength = LengthUnit.Yards
-    var fromlength = LengthUnit.Yards
+    var toLength = LengthUnit.Yards
+    var fromLength = LengthUnit.Yards
     
-    var tovolume = VolumeUnit.Gallons
-    var fromvolume = VolumeUnit.Gallons
+    var toVolume = VolumeUnit.Gallons
+    var fromVolume = VolumeUnit.Gallons
     
+    var getLength = LengthConversionKey.init(toUnits: .Meters, fromUnits: .Yards)
+    
+    var getVolume = VolumeConversionKey.init(toUnits: .Liters, fromUnits: .Gallons)
+    
+    var ans = 0.0
+    var cons = 0.0
     
     var mode : CalculatorMode?
 
@@ -47,53 +53,150 @@ class ViewController: UIViewController {
         fromField.text = ""
     }
     
-    @IBAction func calculateButtonPressed(_ sender: UIButton) {
-        if self.fromField.text != "" && self.toField.text == ""{
-            
-        }
-        
-        else if self.fromField.text == "" && self.toField.text != ""{
-            
-        }
-        
-        
-    }
-    
     func currentMode(){
         switch fromLabel.text{
         case "Yards":
-            fromlength = .Yards
+            fromLength = .Yards
         case "Meters":
-            fromlength = .Meters
+            fromLength = .Meters
         case "Miles":
-            fromlength = .Miles
+            fromLength = .Miles
         case "Gallons":
-            fromvolume = .Gallons
+            fromVolume = .Gallons
         case "Liters":
-            fromvolume = .Liters
+            fromVolume = .Liters
         case "Quarts":
-            fromvolume = .Quarts
+            fromVolume = .Quarts
         default:
             print("There is an error")
         }
         
         switch toLabel.text{
         case "Yards":
-            tolength = .Yards
+            toLength = .Yards
         case "Meters":
-            tolength = .Meters
+            toLength = .Meters
         case "Miles":
-            tolength = .Miles
+            toLength = .Miles
         case "Gallons":
-            tovolume = .Gallons
+            toVolume = .Gallons
         case "Liters":
-            tovolume = .Liters
+            toVolume = .Liters
         case "Quarts":
-            tovolume = .Quarts
+            toVolume = .Quarts
         default:
             print("There is an error")
         }
-}
+    }
+    
+    @IBAction func calculateButtonPressed(_ sender: UIButton) {
+        currentMode()
+        if !(fromField.text?.isEmpty)! && !(toField.text?.isEmpty)! {
+            print("Error, cannot have both boxes filled")
+            print("clear out one of the boxes, thank you!")
+        }
+            //check the mode and which field to calculate
+        else if unit == CalculatorMode.Length && !((fromField.text?.isEmpty)!) {
+            switch fromLength {
+            case .Meters:
+                getLength = LengthConversionKey.init(toUnits: toLength, fromUnits: fromLength)
+                cons = lengthConversionTable[getLength]!
+                
+                ans = cons * Double(fromField.text!)!
+                
+            case .Miles:
+                getLength = LengthConversionKey.init(toUnits: toLength, fromUnits: fromLength)
+                cons = lengthConversionTable[getLength]!
+                
+                ans = cons * Double(fromField.text!)!
+            case .Yards:
+                getLength = LengthConversionKey.init(toUnits: toLength, fromUnits: fromLength)
+                cons = lengthConversionTable[getLength]!
+
+                ans = cons * Double(fromField.text!)!
+            }
+            
+            toField.text = String(ans)
+            
+        }
+            
+        else if unit == CalculatorMode.Length && !((toField.text?.isEmpty)!){
+            switch toLength {
+            case .Meters:
+                getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
+                cons = lengthConversionTable[getLength]!
+                
+                ans = cons * Double(toField.text!)!
+                
+            case .Miles:
+                getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
+                cons = lengthConversionTable[getLength]!
+                
+                ans = cons * Double(toField.text!)!
+            case .Yards:
+                getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
+                cons = lengthConversionTable[getLength]!
+                //print("The constant is \(cons)")
+                //print("from says \(fromLabel.text)")
+                ans = cons * Double(toField.text!)!
+            }
+            
+            fromField.text = String(ans)
+        }
+            
+        else if unit == CalculatorMode.Volume && !((fromField.text?.isEmpty)!) {
+            switch fromVolume {
+            case .Gallons:
+                getVolume = VolumeConversionKey.init(toUnits: toVolume, fromUnits: fromVolume)
+                cons = volumeConversionTable[getVolume]!
+                
+                ans = cons * Double(fromField.text!)!
+                
+            case .Liters:
+                getVolume = VolumeConversionKey.init(toUnits: toVolume, fromUnits: fromVolume)
+                cons = volumeConversionTable[getVolume]!
+                
+                ans = cons * Double(fromField.text!)!
+            case .Quarts:
+                getVolume = VolumeConversionKey.init(toUnits: toVolume, fromUnits: fromVolume)
+                cons = volumeConversionTable[getVolume]!
+                
+                ans = cons * Double(fromField.text!)!
+            }
+            
+            toField.text = String(ans)
+        }
+            
+        else if unit == CalculatorMode.Volume && !((toField.text?.isEmpty)!) {
+            switch toVolume {
+            case .Gallons:
+                getVolume = VolumeConversionKey.init(toUnits: fromVolume, fromUnits: toVolume)
+                cons = volumeConversionTable[getVolume]!
+                
+                ans = cons * Double(toField.text!)!
+                
+            case .Liters:
+                getVolume = VolumeConversionKey.init(toUnits: fromVolume, fromUnits: toVolume)
+                cons = volumeConversionTable[getVolume]!
+                
+                ans = cons * Double(toField.text!)!
+            case .Quarts:
+                getVolume = VolumeConversionKey.init(toUnits: fromVolume, fromUnits: toVolume)
+                cons = volumeConversionTable[getVolume]!
+                
+                ans = cons * Double(toField.text!)!
+            }
+            
+            fromField.text = String(ans)
+        }
+            
+        else {
+            print("Error")
+        
+    }
+    
+ 
 
 
+ }
 }
