@@ -103,9 +103,10 @@
                     <navigationItem key="navigationItem" id="bPg-Sy-ycj"/>
                     <connections>
                         <outlet property="fromField" destination="3j6-ap-t0b" id="CmL-NM-vWu"/>
-                        <outlet property="label1" destination="ZME-OT-mWY" id="v6f-pr-0Ax"/>
-                        <outlet property="label2" destination="PUj-ZS-043" id="IXa-ww-sh7"/>
+                        <outlet property="fromLabel" destination="ZME-OT-mWY" id="j5e-S7-0NJ"/>
+                        <outlet property="titleLabel" destination="TPB-K0-gof" id="YY3-ld-yUo"/>
                         <outlet property="toField" destination="vYN-cT-Qzt" id="aI5-oq-MG6"/>
+                        <outlet property="toLabel" destination="PUj-ZS-043" id="wAQ-mS-eZh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
