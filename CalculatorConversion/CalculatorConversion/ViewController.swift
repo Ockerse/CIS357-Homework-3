@@ -98,19 +98,19 @@ class ViewController: UIViewController {
         
         else if unit == CalculatorMode.Length && !((fromField.text?.isEmpty)!) {
             if toLength == .Meters {
-                getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
+                getLength = LengthConversionKey.init(toUnits: toLength, fromUnits: fromLength)
                 cons = lengthConversionTable[getLength]!
                 ans = cons * Double(fromField.text!)!
             }
                 
             else if toLength == .Miles {
-                getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
+                getLength = LengthConversionKey.init(toUnits: toLength, fromUnits: fromLength)
                 cons = lengthConversionTable[getLength]!
                 ans = cons * Double(fromField.text!)!
             }
                 
             else if toLength == .Yards {
-                getLength = LengthConversionKey.init(toUnits: fromLength, fromUnits: toLength)
+                getLength = LengthConversionKey.init(toUnits: toLength, fromUnits: fromLength)
                 cons = lengthConversionTable[getLength]!
                 ans = cons * Double(fromField.text!)!
             }
@@ -142,46 +142,45 @@ class ViewController: UIViewController {
         }
             
         else if unit == CalculatorMode.Volume && !((fromField.text?.isEmpty)!) {
-            switch fromVolume {
-            case .Gallons:
+            if fromVolume == .Gallons{
                 getVolume = VolumeConversionKey.init(toUnits: toVolume, fromUnits: fromVolume)
                 cons = volumeConversionTable[getVolume]!
-                
                 ans = cons * Double(fromField.text!)!
-                
-            case .Liters:
-                getVolume = VolumeConversionKey.init(toUnits: toVolume, fromUnits: fromVolume)
-                cons = volumeConversionTable[getVolume]!
-                
-                ans = cons * Double(fromField.text!)!
-            case .Quarts:
+            }
+            else if fromVolume == .Liters{
                 getVolume = VolumeConversionKey.init(toUnits: toVolume, fromUnits: fromVolume)
                 cons = volumeConversionTable[getVolume]!
                 
                 ans = cons * Double(fromField.text!)!
             }
+            else if fromVolume == .Quarts{
+                getVolume = VolumeConversionKey.init(toUnits: toVolume, fromUnits: fromVolume)
+                cons = volumeConversionTable[getVolume]!
+                
+                ans = cons * Double(fromField.text!)!
+            }
+    
             
             toField.text = String(ans)
         }
             
         else if unit == CalculatorMode.Volume && !((toField.text?.isEmpty)!) {
-            switch toVolume {
-            case .Gallons:
+            if fromVolume == .Gallons{
+                getVolume = VolumeConversionKey.init(toUnits: fromVolume, fromUnits: toVolume)
+                cons = volumeConversionTable[getVolume]!
+                ans = cons * Double(fromField.text!)!
+            }
+            else if fromVolume == .Liters{
                 getVolume = VolumeConversionKey.init(toUnits: fromVolume, fromUnits: toVolume)
                 cons = volumeConversionTable[getVolume]!
                 
-                ans = cons * Double(toField.text!)!
-                
-            case .Liters:
+                ans = cons * Double(fromField.text!)!
+            }
+            else if fromVolume == .Quarts{
                 getVolume = VolumeConversionKey.init(toUnits: fromVolume, fromUnits: toVolume)
                 cons = volumeConversionTable[getVolume]!
                 
-                ans = cons * Double(toField.text!)!
-            case .Quarts:
-                getVolume = VolumeConversionKey.init(toUnits: fromVolume, fromUnits: toVolume)
-                cons = volumeConversionTable[getVolume]!
-                
-                ans = cons * Double(toField.text!)!
+                ans = cons * Double(fromField.text!)!
             }
             
             fromField.text = String(ans)

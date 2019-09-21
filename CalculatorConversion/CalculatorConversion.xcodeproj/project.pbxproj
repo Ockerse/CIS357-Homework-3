@@ -17,6 +17,7 @@
 		996F281123329C9C00DD14FC /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 996F281023329C9C00DD14FC /* SettingsViewController.swift */; };
 		99B951BA2331BC7A0048B2BA /* DecimalMinusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B951B92331BC7A0048B2BA /* DecimalMinusTextField.swift */; };
 		99C29C47233597BB00A481B2 /* UnitsAndModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C29C46233597BB00A481B2 /* UnitsAndModes.swift */; };
+		99C29C4B2335BD5800A481B2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C29C4A2335BD5800A481B2 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +54,7 @@
 		996F281023329C9C00DD14FC /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		99B951B92331BC7A0048B2BA /* DecimalMinusTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecimalMinusTextField.swift; path = ../../DecimalMinusTextField/DecimalMinusTextField.swift; sourceTree = "<group>"; };
 		99C29C46233597BB00A481B2 /* UnitsAndModes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnitsAndModes.swift; path = ../../../../../Downloads/UnitsAndModes.swift; sourceTree = "<group>"; };
+		99C29C4A2335BD5800A481B2 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				99B951B92331BC7A0048B2BA /* DecimalMinusTextField.swift */,
 				99C29C46233597BB00A481B2 /* UnitsAndModes.swift */,
 				9955405C233176D800D07CF4 /* Main.storyboard */,
+				99C29C4A2335BD5800A481B2 /* SettingViewController.swift */,
 				996F281023329C9C00DD14FC /* SettingsViewController.swift */,
 				9955405F233176D900D07CF4 /* Assets.xcassets */,
 				99554061233176D900D07CF4 /* LaunchScreen.storyboard */,
@@ -270,6 +273,7 @@
 				99B951BA2331BC7A0048B2BA /* DecimalMinusTextField.swift in Sources */,
 				9955405B233176D800D07CF4 /* ViewController.swift in Sources */,
 				99554059233176D800D07CF4 /* AppDelegate.swift in Sources */,
+				99C29C4B2335BD5800A481B2 /* SettingViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
