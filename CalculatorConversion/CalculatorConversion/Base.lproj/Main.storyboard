@@ -182,6 +182,10 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Save" id="ISf-HU-LkV"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="fromUnit" destination="vmk-uZ-jxk" id="1Ax-t6-jhN"/>
+                        <outlet property="toUnit" destination="yVA-gT-WLH" id="Tfd-RZ-2bM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWr-5d-cDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

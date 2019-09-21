@@ -11,6 +11,8 @@ import UIKit
 class SettingViewController: UIViewController {
 
     var save : Bool?
+    @IBOutlet weak var fromUnit: UIButton!
+    @IBOutlet weak var toUnit: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +21,9 @@ class SettingViewController: UIViewController {
     }
     
     
+    @IBAction func cancelButtonPressed(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
 
 }
