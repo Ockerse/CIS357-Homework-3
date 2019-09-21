@@ -14,8 +14,9 @@ class ViewController: UIViewController {
     @IBOutlet weak var fromLabel: UILabel!
     @IBOutlet weak var toLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
+
     
-    var prefix = "Enter length in "
+   
     var unit = CalculatorMode.Length
     var toLength = LengthUnit.Yards
     var fromLength = LengthUnit.Yards
@@ -31,12 +32,13 @@ class ViewController: UIViewController {
     var cons = 0.0
     
     var mode : CalculatorMode?
+    var currentCalcMode = CalculatorMode.Length
 
-    func unitsSelection(from: String, to: String) {
+    func unitsSelection(from: String, to: String, mode: String) {
         self.fromLabel!.text = from
-        self.fromField!.placeholder = prefix + fromLabel!.text!
+        self.fromField!.placeholder = "Enter " + mode + " in " + fromLabel!.text!
         self.toLabel!.text = to
-        self.toField!.placeholder = prefix + toLabel!.text!
+        self.toField!.placeholder = "Enter " + mode + " in " + toLabel!.text!
     }
     
     override func viewDidLoad() {
@@ -52,6 +54,26 @@ class ViewController: UIViewController {
         toField.text = ""
         fromField.text = ""
     }
+    
+    @IBAction func modePressed(_ sender: UIButton) {
+        
+        if (currentCalcMode == CalculatorMode.Length){
+            currentCalcMode = CalculatorMode.Volume
+            titleLabel.text = "Volume Conversion Calculator"
+            fromLabel.text = "Liters"
+            toLabel.text = "Gallons"
+            unitsSelection(from: "Liters", to: "Gallons", mode: "volume")
+        }
+        else {
+            currentCalcMode = CalculatorMode.Length
+            titleLabel.text = "Length Conversion Calculator"
+            fromLabel.text = "Yards"
+            toLabel.text = "Meters"
+            unitsSelection(from: "Yards", to: "Meters", mode: "length" )
+        }
+    }
+    
+    
     
     func currentMode(){
         switch fromLabel.text{
