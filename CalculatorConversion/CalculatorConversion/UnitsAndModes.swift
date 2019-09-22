@@ -1,9 +1,9 @@
 //
 //  UnitsAndModes.swift
-//  CalculatorConversion
+//  HW3-Solution
 //
-//  Created by Aron Ockerse on 9/18/19.
-//  Copyright © 2019 Aron Ockerse. All rights reserved.
+//  Created by Jonathan Engelsma on 9/7/18.
+//  Copyright © 2018 Jonathan Engelsma. All rights reserved.
 //
 
 import Foundation
@@ -29,10 +29,11 @@ struct LengthConversionKey : Hashable {
     var fromUnits : LengthUnit
 }
 
-struct VolumeConversionKey : Hashable {
-    var toUnits : VolumeUnit
-    var fromUnits : VolumeUnit
-}
+// The following tables let you convert between units with a simple dictionary lookup. For example, assume
+// that the variable fromVal holds the value you are converting from:
+//
+//      let convKey =  LengthConversionKey(toUnits: .Miles, fromUnits: .Meters)
+//      let toVal = fromVal * lengthConversionTable[convKey]!;
 
 let lengthConversionTable : Dictionary<LengthConversionKey, Double> = [
     LengthConversionKey(toUnits: .Meters, fromUnits: .Meters) : 1.0,
@@ -46,6 +47,11 @@ let lengthConversionTable : Dictionary<LengthConversionKey, Double> = [
     LengthConversionKey(toUnits: .Miles, fromUnits: .Miles) : 1.0
 ]
 
+struct VolumeConversionKey : Hashable {
+    var toUnits : VolumeUnit
+    var fromUnits : VolumeUnit
+}
+
 let volumeConversionTable : Dictionary<VolumeConversionKey, Double> = [
     VolumeConversionKey(toUnits: .Liters, fromUnits: .Liters) : 1.0,
     VolumeConversionKey(toUnits: .Liters, fromUnits: .Gallons) : 3.78541,
@@ -57,3 +63,33 @@ let volumeConversionTable : Dictionary<VolumeConversionKey, Double> = [
     VolumeConversionKey(toUnits: .Quarts, fromUnits: .Gallons) : 4.0,
     VolumeConversionKey(toUnits: .Quarts, fromUnits: .Quarts) : 1.0
 ]
+
+// To support Swift 4.2's iteration over enum... see
+// source: https://stackoverflow.com/questions/24007461/how-to-enumerate-an-enum-with-string-type
+#if !swift(>=4.2)
+public protocol CaseIterable {
+    associatedtype AllCases: Collection where AllCases.Element == Self
+    static var allCases: AllCases { get }
+}
+extension CaseIterable where Self: Hashable {
+    static var allCases: [Self] {
+        return [Self](AnySequence { () -> AnyIterator<Self> in
+            var raw = 0
+            var first: Self?
+            return AnyIterator {
+                let current = withUnsafeBytes(of: &raw) { $0.load(as: Self.self) }
+                if raw == 0 {
+                    first = current
+                } else if current == first {
+                    return nil
+                }
+                raw += 1
+                return current
+            }
+        })
+    }
+}
+#endif
+
+
+

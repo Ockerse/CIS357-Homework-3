@@ -15,22 +15,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var toLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     
-    var prefix = "Enter length in "
-    var unit = CalculatorMode.Length
-    var tolength = LengthUnit.Yards
-    var fromlength = LengthUnit.Yards
-    
-    var tovolume = VolumeUnit.Gallons
-    var fromvolume = VolumeUnit.Gallons
-    
-    
-    var mode : CalculatorMode?
+   
+    var currentMode: CalculatorMode = .Length
 
-    func unitsSelection(from: String, to: String) {
+    func unitsSelection(from: String, to: String, mode: String) {
         self.fromLabel!.text = from
-        self.fromField!.placeholder = prefix + fromLabel!.text!
+        self.fromField!.placeholder = "Enter " + mode + " " + fromLabel!.text!
         self.toLabel!.text = to
-        self.toField!.placeholder = prefix + toLabel!.text!
+        self.toField!.placeholder = "Enter " + mode + " " + toLabel!.text!
     }
     
     override func viewDidLoad() {
@@ -47,18 +39,79 @@ class ViewController: UIViewController {
         fromField.text = ""
     }
     
+    @IBAction func modePressed(_ sender: UIButton) {
+        
+        if (currentMode == .Length){
+            currentMode = .Volume
+            titleLabel.text = "Volume Conversion Calculator"
+            fromLabel.text = "Liters"
+            toLabel.text = "Gallons"
+            unitsSelection(from: "Liters", to: "Gallons", mode: "volume")
+        }
+        else {
+            currentMode = .Length
+            titleLabel.text = "Length Conversion Calculator"
+            fromLabel.text = "Yards"
+            toLabel.text = "Meters"
+            unitsSelection(from: "Yards", to: "Meters", mode: "length" )
+        }
+    }
+    
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
-        if self.fromField.text != "" && self.toField.text == ""{
+        
+        let convertFrom:Double? = Double(fromField.text!)
+        let convertTo:Double? = Double(toField.text!)
+        
+        switch currentMode {
+         
+        case .Length:
+            let funit:LengthUnit? = LengthUnit(rawValue: fromLabel.text!)
+            let tunit:LengthUnit? = LengthUnit(rawValue: toLabel.text!)
             
+            if fromField.text != "" && toField.text == "" {
+                let convKey = LengthConversionKey(toUnits: funit!, fromUnits: tunit!)
+                let toVal = convertFrom! * lengthConversionTable[convKey]!
+                
+                toField.text = "\(toVal)"
+            
+            }
+                 
+            else if fromField.text == "" && toField.text != "" {
+                     let convKey = LengthConversionKey(toUnits: tunit!, fromUnits: funit!)
+                                   let toVal = convertTo! * lengthConversionTable[convKey]!
+                                   
+                                   fromField.text = "\(toVal)"
+            }
+            
+        case .Volume:
+            let funit:VolumeUnit? = VolumeUnit(rawValue: fromLabel.text!)
+            let tunit:VolumeUnit? = VolumeUnit(rawValue: toLabel.text!)
+                    
+                    if fromField.text != "" && toField.text == "" {
+                        let convKey = VolumeConversionKey(toUnits: funit!, fromUnits: tunit!)
+                        let toVal = convertFrom! * volumeConversionTable[convKey]!
+                        
+                        toField.text = "\(toVal)"
+                    
+                    }
+                         
+                    else if fromField.text == "" && toField.text != ""{
+                             let convKey = VolumeConversionKey(toUnits: tunit!, fromUnits: funit!)
+                                           let toVal = convertTo! * volumeConversionTable[convKey]!
+                                           
+                                           fromField.text = "\(toVal)"
+                    }
+        default:
+            print("")
         }
         
-        else if self.fromField.text == "" && self.toField.text != ""{
-            
-        }
+        
+        
+     
         
         
     }
-    
+    /*
     func currentMode(){
         switch fromLabel.text{
         case "Yards":
@@ -94,6 +147,6 @@ class ViewController: UIViewController {
             print("There is an error")
         }
 }
-
+*/
 
 }
