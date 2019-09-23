@@ -97,26 +97,6 @@ class SettingViewController: UIViewController, UITextFieldDelegate{
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
     }
-    
-//    override func viewWillDisappear(_ animated: Bool) {
-//        super.viewWillDisappear(animated)
-//        if(self.save!){
-//            print("I am in saving")
-//            print(selection)
-//            print(selection2)
-//            if let d = self.delegate {
-//                print("from: \(self.selection) to: \(self.selection2)")
-//                d.settingsChanged(from: self.selection, to: self.selection2)
-//
-//            }else{
-//                print("it broke")
-//            }
-//        }
-//
-//        else {
-//            print ("not saving")
-//        }
-//    }
 }
 
 
@@ -148,17 +128,14 @@ extension SettingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        print("Do I even get here?")
         print(whichMode)
         if (whichMode == 1){
             if(fromOrTo == 2){
-                print("here1")
                 fromUnits.text = pickerData[row]
                 fromLabel = pickerData[row]
                 self.selection = pickerData[row]
             }
             if(fromOrTo == 1){
-                print("here2")
                 toUnits.text = pickerData[row]
                 toLabel = pickerData[row]
                 self.selection = pickerData[row]
@@ -166,12 +143,10 @@ extension SettingViewController: UIPickerViewDelegate, UIPickerViewDataSource {
         }
         if(whichMode == 2){
             if(fromOrTo == 2){
-                print("here3")
                 fromUnits.text = volumeData[row]
                 fromLabel = volumeData[row]
             }
             if(fromOrTo == 1){
-                print("here4")
                 toUnits.text = volumeData[row]
                 toLabel = volumeData[row]
             }

@@ -223,22 +223,20 @@ class ViewController: UIViewController, UITextFieldDelegate, SettingsViewControl
         }
             
         else if unit == CalculatorMode.Volume && !((toField.text?.isEmpty)!) {
-            if fromVolume == .Gallons{
+            if toVolume == .Gallons{
                 getVolume = VolumeConversionKey.init(toUnits: fromVolume, fromUnits: toVolume)
                 cons = volumeConversionTable[getVolume]!
-                ans = cons * Double(fromField.text!)!
+                ans = cons * Double(toField.text!)!
             }
-            else if fromVolume == .Liters{
+            else if toVolume == .Liters{
                 getVolume = VolumeConversionKey.init(toUnits: fromVolume, fromUnits: toVolume)
                 cons = volumeConversionTable[getVolume]!
-                
-                ans = cons * Double(fromField.text!)!
+                ans = cons * Double(toField.text!)!
             }
-            else if fromVolume == .Quarts{
+            else if toVolume == .Quarts{
                 getVolume = VolumeConversionKey.init(toUnits: fromVolume, fromUnits: toVolume)
                 cons = volumeConversionTable[getVolume]!
-                
-                ans = cons * Double(fromField.text!)!
+                ans = cons * Double(toField.text!)!
             }
             
             fromField.text = String(ans)
