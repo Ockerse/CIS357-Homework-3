@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate, SettingsViewControllerDelecate{
     @IBOutlet weak var fromField: DecimalMinusTextField!
     @IBOutlet weak var toField: DecimalMinusTextField!
     @IBOutlet weak var fromLabel: UILabel!
@@ -32,7 +32,14 @@ class ViewController: UIViewController {
     var cons = 0.0
     
     var mode : CalculatorMode?
+    var whatMode: Int = 1
     var currentCalcMode = CalculatorMode.Length
+    
+    func settingsChanged(from: String, to: String) {
+        print("I am now in settings")
+        fromLabel.text = from
+        toLabel.text = to
+    }
 
     func unitsSelection(from: String, to: String, mode: String) {
         self.fromLabel!.text = from
@@ -43,11 +50,29 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        let detectTouch = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
+        self.view.addGestureRecognizer(detectTouch)
     }
     
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let d = segue.destination.children[0] as? SettingViewController{
+            d.whichMode = whatMode
+            d.fromStr = fromLabel.text!
+            d.toStr = toLabel.text!
+            d.delegate = self
+            
+            if unit == .Length{
+                d.mode = unit
+            }else{
+                d.mode = unit
+            }
+        }else{
+            print("IT BROKE AGAIN")
+        }
     }
     
     @IBAction func clearButtonPressed(_ sender: UIButton) {
@@ -55,6 +80,9 @@ class ViewController: UIViewController {
         fromField.text = ""
     }
     
+    @IBAction func settingsButtonPressed(_ sender: Any) {
+        currentMode()
+    }
     @IBAction func modePressed(_ sender: UIButton) {
         
         if (currentCalcMode == CalculatorMode.Length){
@@ -64,7 +92,7 @@ class ViewController: UIViewController {
             toLabel.text = "Gallons"
             unitsSelection(from: "Liters", to: "Gallons", mode: "volume")
         }
-        else {
+        else if currentCalcMode == CalculatorMode.Volume {
             currentCalcMode = CalculatorMode.Length
             titleLabel.text = "Length Conversion Calculator"
             fromLabel.text = "Yards"
@@ -73,8 +101,7 @@ class ViewController: UIViewController {
         }
     }
     
-    
-    
+
     func currentMode(){
         switch fromLabel.text{
         case "Yards":
@@ -109,13 +136,18 @@ class ViewController: UIViewController {
         default:
             print("There is an error")
         }
+        
+        if titleLabel.text == "Length Conversion Calculator"{
+            unit = .Length
+        }else{
+            unit = .Volume
+        }
     }
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
         currentMode()
         if !(fromField.text?.isEmpty)! && !(toField.text?.isEmpty)! {
             print("Error, cannot have both boxes filled")
-            print("clear out one of the boxes, thank you!")
         }
         
         else if unit == CalculatorMode.Length && !((fromField.text?.isEmpty)!) {

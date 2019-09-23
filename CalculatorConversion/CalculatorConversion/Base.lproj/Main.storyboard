@@ -89,6 +89,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings"/>
                                 <connections>
+                                    <action selector="settingsButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Z6V-QX-aGl"/>
                                     <segue destination="7iV-F4-aKy" kind="show" id="gU7-4Y-iJ3"/>
                                 </connections>
                             </button>
@@ -159,20 +160,20 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vmk-uZ-jxk">
-                                <rect key="frame" x="239" y="140" width="39" height="30"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMm-OT-4dQ">
+                                <rect key="frame" x="245" y="145" width="43" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Yards">
-                                    <color key="titleColor" red="0.61558856870000001" green="0.61558856870000001" blue="0.61558856870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yVA-gT-WLH">
-                                <rect key="frame" x="234" y="218" width="48" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.61558856870000001" green="0.61558856870000001" blue="0.61558856870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHq-DA-FZJ">
+                                <rect key="frame" x="239" y="222" width="54" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Meters">
-                                    <color key="titleColor" red="0.61558856870000001" green="0.61558856870000001" blue="0.61558856870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                            </button>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.61558856870000001" green="0.61558856870000001" blue="0.61558856870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="i19-wF-rof"/>
@@ -183,11 +184,16 @@
                                 <action selector="cancelButtonPressed:" destination="Axe-g0-ARF" id="J9R-7b-GFz"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Save" id="ISf-HU-LkV"/>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="ISf-HU-LkV">
+                            <connections>
+                                <action selector="saveButtonPressed:" destination="Axe-g0-ARF" id="RhM-MA-A23"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="fromUnit" destination="vmk-uZ-jxk" id="1Ax-t6-jhN"/>
-                        <outlet property="toUnit" destination="yVA-gT-WLH" id="Tfd-RZ-2bM"/>
+                        <outlet property="fromUnits" destination="pMm-OT-4dQ" id="GNG-5G-1Vl"/>
+                        <outlet property="picker" destination="UOl-JG-px0" id="nwu-9Z-XCP"/>
+                        <outlet property="toUnits" destination="FHq-DA-FZJ" id="DXn-0d-7yR"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dWr-5d-cDh" userLabel="First Responder" sceneMemberID="firstResponder"/>
