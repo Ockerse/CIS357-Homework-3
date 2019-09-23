@@ -87,6 +87,8 @@ class ViewController: UIViewController, UITextFieldDelegate, SettingsViewControl
         
         if (currentCalcMode == CalculatorMode.Length){
             currentCalcMode = CalculatorMode.Volume
+            whatMode = 2
+            mode = CalculatorMode.Volume
             titleLabel.text = "Volume Conversion Calculator"
             fromLabel.text = "Liters"
             toLabel.text = "Gallons"
@@ -94,6 +96,8 @@ class ViewController: UIViewController, UITextFieldDelegate, SettingsViewControl
         }
         else if currentCalcMode == CalculatorMode.Volume {
             currentCalcMode = CalculatorMode.Length
+            whatMode = 1
+            mode = CalculatorMode.Length
             titleLabel.text = "Length Conversion Calculator"
             fromLabel.text = "Yards"
             toLabel.text = "Meters"
