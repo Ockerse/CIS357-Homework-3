@@ -36,9 +36,12 @@ class ViewController: UIViewController, UITextFieldDelegate, SettingsViewControl
     var currentCalcMode = CalculatorMode.Length
     
     func settingsChanged(from: String, to: String) {
-        print("I am now in settings")
-        fromLabel.text = from
-        toLabel.text = to
+       
+        var m = "length"
+        if mode == CalculatorMode.Volume {
+            m = "volume"
+        }
+        unitsSelection(from: from, to: to, mode: m)
     }
 
     func unitsSelection(from: String, to: String, mode: String) {
