@@ -8,7 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SettingsViewControllerDelegate {
+    func settingsChanged(fromUnits: VolumeUnit, toUnits: VolumeUnit) {
+        self.fromLabel.text = "\(fromUnits)"
+        self.toLabel.text = "\(toUnits)"
+    }
+    
+    func settingsChanged(fromUnits: LengthUnit, toUnits: LengthUnit){
+        self.fromLabel.text = "\(fromUnits)"
+        self.toLabel.text = "\(toUnits)"
+    }
+
+    
     @IBOutlet weak var fromField: DecimalMinusTextField!
     @IBOutlet weak var toField: DecimalMinusTextField!
     @IBOutlet weak var fromLabel: UILabel!
@@ -105,10 +116,7 @@ class ViewController: UIViewController {
             print("")
         }
         
-        
-        
-     
-        
+    
         
     }
     /*
@@ -148,5 +156,15 @@ class ViewController: UIViewController {
         }
 }
 */
-
+    
+    
+       
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSettings" {
+            if let dest = segue.destination as? SettingsViewController {
+                dest.delegate = self
+            }
+    }
+    }
+    
 }
