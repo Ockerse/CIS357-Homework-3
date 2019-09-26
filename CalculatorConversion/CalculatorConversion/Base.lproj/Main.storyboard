@@ -17,47 +17,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter length in Yards" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3j6-ap-t0b" customClass="DecimalMinusTextField" customModule="CalculatorConversion" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter length in Yards" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3j6-ap-t0b" customClass="CalculatorConversionTextField" customModule="CalculatorConversion" customModuleProvider="target">
                                 <rect key="frame" x="43" y="134" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter length in Meters" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vYN-cT-Qzt" customClass="DecimalMinusTextField" customModule="CalculatorConversion" customModuleProvider="target">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter length in Meters" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vYN-cT-Qzt" customClass="CalculatorConversionTextField" customModule="CalculatorConversion" customModuleProvider="target">
                                 <rect key="frame" x="43" y="201" width="170" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBs-pa-kp8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KBs-pa-kp8" customClass="CalculatorConversionLabel" customModule="CalculatorConversion" customModuleProvider="target">
                                 <rect key="frame" x="43" y="105" width="40" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEb-VP-ibr">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oEb-VP-ibr" customClass="CalculatorConversionLabel" customModule="CalculatorConversion" customModuleProvider="target">
                                 <rect key="frame" x="43" y="172" width="19" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Length Conversion Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPB-K0-gof">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Length Conversion Calculator" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPB-K0-gof" customClass="CalculatorConversionLabel" customModule="CalculatorConversion" customModuleProvider="target">
                                 <rect key="frame" x="43" y="65" width="330" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUj-ZS-043">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PUj-ZS-043" customClass="CalculatorConversionLabel" customModule="CalculatorConversion" customModuleProvider="target">
                                 <rect key="frame" x="241" y="206" width="116" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyB-xI-l3m">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OyB-xI-l3m" customClass="CalculatorConversionUIButton" customModule="CalculatorConversion" customModuleProvider="target">
                                 <rect key="frame" x="20" y="316" width="64" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Calculate"/>
@@ -65,7 +65,7 @@
                                     <action selector="calculateButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gXw-PQ-J5o"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mw4-Jq-FhQ">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mw4-Jq-FhQ" customClass="CalculatorConversionUIButton" customModule="CalculatorConversion" customModuleProvider="target">
                                 <rect key="frame" x="189" y="316" width="36" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Clear"/>
@@ -73,7 +73,7 @@
                                     <action selector="clearButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="err-ai-cHy"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-sY-NMK">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-sY-NMK" customClass="CalculatorConversionUIButton" customModule="CalculatorConversion" customModuleProvider="target">
                                 <rect key="frame" x="355" y="316" width="39" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Mode"/>
@@ -81,7 +81,7 @@
                                     <action selector="modePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NgD-Ro-qCR"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9T-Cw-zLD">
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n9T-Cw-zLD" customClass="CalculatorConversionUIButton" customModule="CalculatorConversion" customModuleProvider="target">
                                 <rect key="frame" x="179" y="433" width="57" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Settings"/>
@@ -90,7 +90,7 @@
                                     <segue destination="7iV-F4-aKy" kind="show" id="gU7-4Y-iJ3"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZME-OT-mWY">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZME-OT-mWY" customClass="CalculatorConversionLabel" customModule="CalculatorConversion" customModuleProvider="target">
                                 <rect key="frame" x="241" y="139" width="116" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -114,15 +114,19 @@
             </objects>
             <point key="canvasLocation" x="-2175.36231884058" y="20.758928571428569"/>
         </scene>
-        <!--Item-->
+        <!--Settings-->
         <scene sceneID="kmE-d5-fcL">
             <objects>
-                <navigationController id="7iV-F4-aKy" sceneMemberID="viewController">
+                <navigationController title="Settings" modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="7iV-F4-aKy" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="iXF-yu-qAh"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="62q-jE-jXw">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uAF-xP-0Ah">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="Axe-g0-ARF" kind="relationship" relationship="rootViewController" id="NuS-V6-fVo"/>
                     </connections>
@@ -131,16 +135,16 @@
             </objects>
             <point key="canvasLocation" x="-1378" y="21"/>
         </scene>
-        <!--Setting View Controller-->
+        <!--Settings-->
         <scene sceneID="ekM-wh-tW8">
             <objects>
-                <viewController id="Axe-g0-ARF" customClass="SettingViewController" customModule="CalculatorConversion" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" hidesBottomBarWhenPushed="YES" id="Axe-g0-ARF" customClass="SettingViewController" customModule="CalculatorConversion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CKV-dx-NxZ">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fIF-7E-ekA">
-                                <rect key="frame" x="8" y="64" width="398" height="49"/>
+                                <rect key="frame" x="8" y="96" width="398" height="49"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="VGm-WY-NCU" userLabel="From">
                                         <rect key="frame" x="0.0" y="0.0" width="398" height="20.5"/>
@@ -178,8 +182,8 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UOl-JG-px0">
-                                <rect key="frame" x="0.0" y="742" width="414" height="100"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOl-JG-px0">
+                                <rect key="frame" x="0.0" y="694" width="414" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="yxB-Uc-kVy"/>
                                 </constraints>
@@ -191,15 +195,17 @@
                             <constraint firstAttribute="bottom" secondItem="UOl-JG-px0" secondAttribute="bottom" id="5Fr-my-IPk"/>
                             <constraint firstItem="UOl-JG-px0" firstAttribute="trailing" secondItem="i19-wF-rof" secondAttribute="trailing" id="6gQ-fR-Dlc"/>
                             <constraint firstItem="fIF-7E-ekA" firstAttribute="top" secondItem="i19-wF-rof" secondAttribute="top" constant="8" id="Mjj-os-oAt"/>
+                            <constraint firstItem="i19-wF-rof" firstAttribute="bottom" secondItem="UOl-JG-px0" secondAttribute="bottom" id="NOa-yv-jRW"/>
                             <constraint firstItem="fIF-7E-ekA" firstAttribute="leading" secondItem="i19-wF-rof" secondAttribute="leading" constant="8" id="T5W-4t-RJD"/>
                             <constraint firstItem="UOl-JG-px0" firstAttribute="leading" secondItem="i19-wF-rof" secondAttribute="leading" id="Y2i-7v-rxe"/>
+                            <constraint firstItem="i19-wF-rof" firstAttribute="bottom" secondItem="UOl-JG-px0" secondAttribute="bottom" constant="68" id="aFZ-1n-rTY"/>
                             <constraint firstAttribute="bottom" secondItem="UOl-JG-px0" secondAttribute="bottom" constant="-20" id="fGv-xr-MfM"/>
                             <constraint firstItem="UOl-JG-px0" firstAttribute="trailing" secondItem="i19-wF-rof" secondAttribute="trailing" id="hX1-oG-7bP"/>
                             <constraint firstItem="i19-wF-rof" firstAttribute="trailing" secondItem="fIF-7E-ekA" secondAttribute="trailing" constant="8" id="nC6-H4-tm8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i19-wF-rof"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Sa9-mR-zX2">
+                    <navigationItem key="navigationItem" title="Settings" id="Sa9-mR-zX2">
                         <barButtonItem key="leftBarButtonItem" title="Cancel" id="6IR-mS-lhz">
                             <connections>
                                 <action selector="cancelButtonPressed:" destination="Axe-g0-ARF" id="J9R-7b-GFz"/>
@@ -211,6 +217,8 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <splitViewDetailSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="fromUnits" destination="pMm-OT-4dQ" id="GNG-5G-1Vl"/>
                         <outlet property="picker" destination="UOl-JG-px0" id="nwu-9Z-XCP"/>

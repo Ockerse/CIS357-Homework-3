@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, SettingsViewControllerDelecate{
+class ViewController: CalculatorConversionViewController, UITextFieldDelegate, SettingsViewControllerDelecate{
     @IBOutlet weak var fromField: DecimalMinusTextField!
     @IBOutlet weak var toField: DecimalMinusTextField!
     @IBOutlet weak var fromLabel: UILabel!

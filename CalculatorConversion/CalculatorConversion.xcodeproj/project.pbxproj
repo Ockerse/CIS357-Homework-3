@@ -17,6 +17,11 @@
 		99B951BA2331BC7A0048B2BA /* DecimalMinusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B951B92331BC7A0048B2BA /* DecimalMinusTextField.swift */; };
 		99C29C47233597BB00A481B2 /* UnitsAndModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C29C46233597BB00A481B2 /* UnitsAndModes.swift */; };
 		99C29C4B2335BD5800A481B2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C29C4A2335BD5800A481B2 /* SettingViewController.swift */; };
+		B5FDE0F4233C732900C8FB15 /* CalculatorConversionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDE0F3233C732900C8FB15 /* CalculatorConversionLabel.swift */; };
+		B5FDE0F6233C73C800C8FB15 /* CalculatorConversionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDE0F5233C73C800C8FB15 /* CalculatorConversionButton.swift */; };
+		B5FDE0F8233C749B00C8FB15 /* CalculatorConversionTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDE0F7233C749B00C8FB15 /* CalculatorConversionTextField.swift */; };
+		B5FDE0FA233C767500C8FB15 /* CalculatorConversionUIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDE0F9233C767500C8FB15 /* CalculatorConversionUIButton.swift */; };
+		B5FDE0FC233C783500C8FB15 /* CalculatorConversionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5FDE0FB233C783500C8FB15 /* CalculatorConversionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		99B951B92331BC7A0048B2BA /* DecimalMinusTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecimalMinusTextField.swift; path = ../../DecimalMinusTextField/DecimalMinusTextField.swift; sourceTree = "<group>"; };
 		99C29C46233597BB00A481B2 /* UnitsAndModes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UnitsAndModes.swift; path = ../../../../../Downloads/UnitsAndModes.swift; sourceTree = "<group>"; };
 		99C29C4A2335BD5800A481B2 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		B5FDE0F3233C732900C8FB15 /* CalculatorConversionLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConversionLabel.swift; sourceTree = "<group>"; };
+		B5FDE0F5233C73C800C8FB15 /* CalculatorConversionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConversionButton.swift; sourceTree = "<group>"; };
+		B5FDE0F7233C749B00C8FB15 /* CalculatorConversionTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConversionTextField.swift; sourceTree = "<group>"; };
+		B5FDE0F9233C767500C8FB15 /* CalculatorConversionUIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConversionUIButton.swift; sourceTree = "<group>"; };
+		B5FDE0FB233C783500C8FB15 /* CalculatorConversionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConversionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +122,11 @@
 				9955405F233176D900D07CF4 /* Assets.xcassets */,
 				99554061233176D900D07CF4 /* LaunchScreen.storyboard */,
 				99554064233176D900D07CF4 /* Info.plist */,
+				B5FDE0F3233C732900C8FB15 /* CalculatorConversionLabel.swift */,
+				B5FDE0F5233C73C800C8FB15 /* CalculatorConversionButton.swift */,
+				B5FDE0F7233C749B00C8FB15 /* CalculatorConversionTextField.swift */,
+				B5FDE0F9233C767500C8FB15 /* CalculatorConversionUIButton.swift */,
+				B5FDE0FB233C783500C8FB15 /* CalculatorConversionViewController.swift */,
 			);
 			path = CalculatorConversion;
 			sourceTree = "<group>";
@@ -265,11 +280,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5FDE0F6233C73C800C8FB15 /* CalculatorConversionButton.swift in Sources */,
 				99C29C47233597BB00A481B2 /* UnitsAndModes.swift in Sources */,
 				99B951BA2331BC7A0048B2BA /* DecimalMinusTextField.swift in Sources */,
+				B5FDE0F4233C732900C8FB15 /* CalculatorConversionLabel.swift in Sources */,
 				9955405B233176D800D07CF4 /* ViewController.swift in Sources */,
 				99554059233176D800D07CF4 /* AppDelegate.swift in Sources */,
 				99C29C4B2335BD5800A481B2 /* SettingViewController.swift in Sources */,
+				B5FDE0F8233C749B00C8FB15 /* CalculatorConversionTextField.swift in Sources */,
+				B5FDE0FC233C783500C8FB15 /* CalculatorConversionViewController.swift in Sources */,
+				B5FDE0FA233C767500C8FB15 /* CalculatorConversionUIButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
