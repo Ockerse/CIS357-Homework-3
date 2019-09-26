@@ -139,12 +139,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOl-JG-px0">
-                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="yxB-Uc-kVy"/>
-                                </constraints>
-                            </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fIF-7E-ekA">
                                 <rect key="frame" x="8" y="64" width="398" height="49"/>
                                 <subviews>
@@ -157,7 +151,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yards" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMm-OT-4dQ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Yards" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pMm-OT-4dQ">
                                                 <rect key="frame" x="203" y="0.0" width="195" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.61558856870000001" green="0.61558856870000001" blue="0.61558856870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -174,7 +168,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meters" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHq-DA-FZJ">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Meters" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FHq-DA-FZJ">
                                                 <rect key="frame" x="203" y="0.0" width="195" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.61558856870000001" green="0.61558856870000001" blue="0.61558856870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -184,12 +178,21 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
+                            <pickerView contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UOl-JG-px0">
+                                <rect key="frame" x="0.0" y="742" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="yxB-Uc-kVy"/>
+                                </constraints>
+                            </pickerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UOl-JG-px0" firstAttribute="leading" secondItem="i19-wF-rof" secondAttribute="leading" id="1at-lr-htg"/>
+                            <constraint firstAttribute="bottom" secondItem="UOl-JG-px0" secondAttribute="bottom" id="5Fr-my-IPk"/>
+                            <constraint firstItem="UOl-JG-px0" firstAttribute="trailing" secondItem="i19-wF-rof" secondAttribute="trailing" id="6gQ-fR-Dlc"/>
                             <constraint firstItem="fIF-7E-ekA" firstAttribute="top" secondItem="i19-wF-rof" secondAttribute="top" constant="8" id="Mjj-os-oAt"/>
                             <constraint firstItem="fIF-7E-ekA" firstAttribute="leading" secondItem="i19-wF-rof" secondAttribute="leading" constant="8" id="T5W-4t-RJD"/>
+                            <constraint firstItem="UOl-JG-px0" firstAttribute="leading" secondItem="i19-wF-rof" secondAttribute="leading" id="Y2i-7v-rxe"/>
                             <constraint firstAttribute="bottom" secondItem="UOl-JG-px0" secondAttribute="bottom" constant="-20" id="fGv-xr-MfM"/>
                             <constraint firstItem="UOl-JG-px0" firstAttribute="trailing" secondItem="i19-wF-rof" secondAttribute="trailing" id="hX1-oG-7bP"/>
                             <constraint firstItem="i19-wF-rof" firstAttribute="trailing" secondItem="fIF-7E-ekA" secondAttribute="trailing" constant="8" id="nC6-H4-tm8"/>
