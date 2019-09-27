@@ -8,8 +8,8 @@
 
 import UIKit
 
-let BACKGROUND_COLOR = UIColor.init(red:0.000, green:0.369, blue:0.420, alpha:1.00)
-let FOREGROUND_COLOR = UIColor.init(red: 0.937, green: 0.820,blue: 0.576, alpha: 1.0)
+let BACKGROUND_COLOR = UIColor.init(red:0.18, green:0.2, blue:0.21, alpha:1.00)
+let FOREGROUND_COLOR = UIColor.init(red: 0.51, green: 0.93,blue: 0.93, alpha: 1.0)
 let THEME_COLOR1 = UIColor.init(red:0.000, green:0.157, blue:0.216,
                                 alpha:1.00)  // DARK BLUE
 let THEME_COLOR2 = UIColor.init(red:0.000, green:0.369, blue:0.420,

@@ -11,10 +11,10 @@ import UIKit
 class ConverterButton: UIButton {
     
     override func awakeFromNib() {
-        self.backgroundColor = THEME_COLOR3
-        self.tintColor = THEME_COLOR2
+        self.backgroundColor = FOREGROUND_COLOR
+        self.tintColor = BACKGROUND_COLOR
         self.layer.borderWidth = 1.0
-        self.layer.borderColor = THEME_COLOR3.cgColor
+        self.layer.borderColor = FOREGROUND_COLOR.cgColor
         self.layer.cornerRadius = 5.0
     }
 }

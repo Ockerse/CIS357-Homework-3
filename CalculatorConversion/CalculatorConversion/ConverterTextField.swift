@@ -15,12 +15,12 @@ class ConverterTextField: UITextField {
     
     override func awakeFromNib() {
         
-        self.tintColor = THEME_COLOR3
+        self.tintColor = FOREGROUND_COLOR
         self.layer.borderWidth = 1.0
-        self.layer.borderColor = THEME_COLOR3.cgColor
+        self.layer.borderColor = FOREGROUND_COLOR.cgColor
         self.layer.cornerRadius = 5.0
         
-        self.textColor = THEME_COLOR3
+        self.textColor = FOREGROUND_COLOR
         self.backgroundColor = UIColor.clear
         self.borderStyle = .roundedRect
         
@@ -30,6 +30,6 @@ class ConverterTextField: UITextField {
         
         self.attributedPlaceholder =
             NSAttributedString(string: ph, attributes: [NSAttributedString.Key.foregroundColor :
-                THEME_COLOR3])
+                FOREGROUND_COLOR])
     }
 }

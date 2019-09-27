@@ -11,6 +11,6 @@ import UIKit
 class ConverterLabel: UILabel {
     
     override func awakeFromNib() {
-        self.textColor = THEME_COLOR3
+        self.textColor = FOREGROUND_COLOR
     }
 }

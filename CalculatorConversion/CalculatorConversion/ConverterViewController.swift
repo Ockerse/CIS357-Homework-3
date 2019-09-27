@@ -12,7 +12,7 @@ class ConverterViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = THEME_COLOR2
+        self.view.backgroundColor = BACKGROUND_COLOR
         self.setNeedsStatusBarAppearanceUpdate()
     }
     
