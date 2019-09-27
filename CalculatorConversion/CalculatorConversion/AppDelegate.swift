@@ -10,16 +10,7 @@ import UIKit
 
 let BACKGROUND_COLOR = UIColor.init(red:0.18, green:0.2, blue:0.21, alpha:1.00)
 let FOREGROUND_COLOR = UIColor.init(red: 0.51, green: 0.93,blue: 0.93, alpha: 1.0)
-let THEME_COLOR1 = UIColor.init(red:0.000, green:0.157, blue:0.216,
-                                alpha:1.00)  // DARK BLUE
-let THEME_COLOR2 = UIColor.init(red:0.000, green:0.369, blue:0.420,
-                                alpha:1.00) // Light Tan
-let THEME_COLOR3 = UIColor.init(red: 0.937, green: 0.820, blue: 0.576,
-                                alpha: 1.0)  // Lighter Blue
-let THEME_COLOR4 = UIColor.init(red:0.576, green:0.596, blue:0.329,
-                                alpha:1.00) // Greenish Tan
-let THEME_COLOR5 = UIColor.init(red:0.251, green:0.286, blue:0.141,
-                                alpha:1.00) // Army Green
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         let navAppearance = UINavigationBar.appearance()
-        navAppearance.barTintColor = THEME_COLOR2
-        navAppearance.tintColor = THEME_COLOR3
+        navAppearance.barTintColor = BACKGROUND_COLOR
+        navAppearance.tintColor = FOREGROUND_COLOR
         navAppearance.isTranslucent = false
         navAppearance.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
         return true
