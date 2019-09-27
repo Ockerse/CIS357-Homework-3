@@ -38,7 +38,7 @@ class SettingViewController: UIViewController, UITextFieldDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         picker.isHidden = true
-        self.volumeData = ["Gallons","Liters","Quarts"]
+        self.volumeData = ["Liters","Gallons","Quarts"]
         self.pickerData = ["Yards", "Miles", "Meters"]
         self.picker.delegate = self
         self.picker.dataSource = self

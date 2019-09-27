@@ -150,6 +150,7 @@ class ViewController: UIViewController, UITextFieldDelegate, SettingsViewControl
     
     @IBAction func calculateButtonPressed(_ sender: UIButton) {
         currentMode()
+        dismissKeyboard()
         if !(fromField.text?.isEmpty)! && !(toField.text?.isEmpty)! {
             print("Error, cannot have both boxes filled")
         }
