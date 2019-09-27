@@ -67,7 +67,7 @@
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="IUx-rN-l5Y">
                                         <rect key="frame" x="0.0" y="152" width="374" height="30"/>
                                         <subviews>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter length in Meters" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vYN-cT-Qzt" customClass="ConverterTextField" customModule="CalculatorConversion" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter length in Meters" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="vYN-cT-Qzt" customClass="DecimalMinusTextField" customModule="CalculatorConversion" customModuleProvider="target">
                                                 <rect key="frame" x="0.0" y="0.0" width="183" height="30"/>
                                                 <nil key="textColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -170,9 +170,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UOl-JG-px0">
-                                <rect key="frame" x="0.0" y="646" width="414" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UOl-JG-px0">
+                                <rect key="frame" x="0.0" y="762" width="414" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ngm-0N-iyo"/>
+                                </constraints>
                             </pickerView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="Ov1-40-IU4">
                                 <rect key="frame" x="20" y="96" width="374" height="65"/>
@@ -216,9 +218,13 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="UOl-JG-px0" firstAttribute="bottom" secondItem="i19-wF-rof" secondAttribute="bottom" id="OpF-e9-XNH"/>
                             <constraint firstItem="i19-wF-rof" firstAttribute="trailing" secondItem="Ov1-40-IU4" secondAttribute="trailing" constant="20" id="YoD-Xd-Ixg"/>
+                            <constraint firstItem="UOl-JG-px0" firstAttribute="leading" secondItem="i19-wF-rof" secondAttribute="leading" id="ZY4-wW-634"/>
                             <constraint firstItem="Ov1-40-IU4" firstAttribute="leading" secondItem="i19-wF-rof" secondAttribute="leading" constant="20" id="efi-r5-fez"/>
                             <constraint firstItem="Ov1-40-IU4" firstAttribute="top" secondItem="i19-wF-rof" secondAttribute="top" constant="8" id="fod-Zk-RRb"/>
+                            <constraint firstItem="UOl-JG-px0" firstAttribute="trailing" secondItem="i19-wF-rof" secondAttribute="trailing" id="lBy-M2-HfI"/>
+                            <constraint firstItem="UOl-JG-px0" firstAttribute="centerX" secondItem="i19-wF-rof" secondAttribute="centerX" id="seM-sJ-zLp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="i19-wF-rof"/>
                     </view>
