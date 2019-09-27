@@ -15,6 +15,10 @@
 		9955406E233176D900D07CF4 /* CalculatorConversionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9955406D233176D900D07CF4 /* CalculatorConversionTests.swift */; };
 		99554079233176D900D07CF4 /* CalculatorConversionUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99554078233176D900D07CF4 /* CalculatorConversionUITests.swift */; };
 		99828AE0233945B000DF91C0 /* UnitsAndModes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99828ADF233945B000DF91C0 /* UnitsAndModes.swift */; };
+		998AA733233E5B5700C9EABC /* ConverterLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998AA732233E5B5700C9EABC /* ConverterLabel.swift */; };
+		998AA735233E5D0100C9EABC /* ConverterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998AA734233E5D0100C9EABC /* ConverterButton.swift */; };
+		998AA737233E5D4400C9EABC /* ConverterTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998AA736233E5D4400C9EABC /* ConverterTextField.swift */; };
+		998AA739233E5E9F00C9EABC /* ConverterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 998AA738233E5E9F00C9EABC /* ConverterViewController.swift */; };
 		99B951BA2331BC7A0048B2BA /* DecimalMinusTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99B951B92331BC7A0048B2BA /* DecimalMinusTextField.swift */; };
 		99C29C4B2335BD5800A481B2 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99C29C4A2335BD5800A481B2 /* SettingViewController.swift */; };
 /* End PBXBuildFile section */
@@ -51,6 +55,10 @@
 		99554078233176D900D07CF4 /* CalculatorConversionUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorConversionUITests.swift; sourceTree = "<group>"; };
 		9955407A233176D900D07CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		99828ADF233945B000DF91C0 /* UnitsAndModes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UnitsAndModes.swift; sourceTree = SOURCE_ROOT; };
+		998AA732233E5B5700C9EABC /* ConverterLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterLabel.swift; sourceTree = "<group>"; };
+		998AA734233E5D0100C9EABC /* ConverterButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterButton.swift; sourceTree = "<group>"; };
+		998AA736233E5D4400C9EABC /* ConverterTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTextField.swift; sourceTree = "<group>"; };
+		998AA738233E5E9F00C9EABC /* ConverterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterViewController.swift; sourceTree = "<group>"; };
 		99B951B92331BC7A0048B2BA /* DecimalMinusTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DecimalMinusTextField.swift; path = ../../DecimalMinusTextField/DecimalMinusTextField.swift; sourceTree = "<group>"; };
 		99C29C4A2335BD5800A481B2 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -112,6 +120,10 @@
 				9955405F233176D900D07CF4 /* Assets.xcassets */,
 				99554061233176D900D07CF4 /* LaunchScreen.storyboard */,
 				99554064233176D900D07CF4 /* Info.plist */,
+				998AA732233E5B5700C9EABC /* ConverterLabel.swift */,
+				998AA734233E5D0100C9EABC /* ConverterButton.swift */,
+				998AA736233E5D4400C9EABC /* ConverterTextField.swift */,
+				998AA738233E5E9F00C9EABC /* ConverterViewController.swift */,
 			);
 			path = CalculatorConversion;
 			sourceTree = "<group>";
@@ -268,8 +280,12 @@
 				99B951BA2331BC7A0048B2BA /* DecimalMinusTextField.swift in Sources */,
 				9955405B233176D800D07CF4 /* ViewController.swift in Sources */,
 				99828AE0233945B000DF91C0 /* UnitsAndModes.swift in Sources */,
+				998AA733233E5B5700C9EABC /* ConverterLabel.swift in Sources */,
+				998AA737233E5D4400C9EABC /* ConverterTextField.swift in Sources */,
+				998AA735233E5D0100C9EABC /* ConverterButton.swift in Sources */,
 				99554059233176D800D07CF4 /* AppDelegate.swift in Sources */,
 				99C29C4B2335BD5800A481B2 /* SettingViewController.swift in Sources */,
+				998AA739233E5E9F00C9EABC /* ConverterViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

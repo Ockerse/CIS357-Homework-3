@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITextFieldDelegate, SettingsViewControllerDelecate{
+class ViewController: ConverterViewController, UITextFieldDelegate, SettingsViewControllerDelecate{
     @IBOutlet weak var fromField: DecimalMinusTextField!
     @IBOutlet weak var toField: DecimalMinusTextField!
     @IBOutlet weak var fromLabel: UILabel!
@@ -55,7 +55,13 @@ class ViewController: UIViewController, UITextFieldDelegate, SettingsViewControl
         super.viewDidLoad()
         let detectTouch = UITapGestureRecognizer(target: self, action: #selector(self.dismissKeyboard))
         self.view.addGestureRecognizer(detectTouch)
+        self.setNeedsStatusBarAppearanceUpdate()
     }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     
     @objc func dismissKeyboard() {
         self.view.endEditing(true)
@@ -255,4 +261,10 @@ class ViewController: UIViewController, UITextFieldDelegate, SettingsViewControl
 
 
  }
+    
+}
+extension UINavigationController {
+    override open var preferredStatusBarStyle : UIStatusBarStyle {
+        return topViewController?.preferredStatusBarStyle ?? .default
+}
 }
